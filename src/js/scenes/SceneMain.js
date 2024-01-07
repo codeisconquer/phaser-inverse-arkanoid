@@ -25,6 +25,9 @@ export default class SceneMain extends Phaser.Scene {
         });
         this.alignGrid.showNumbers();
 
+        var soundButtons = new SoundButtons({ scene: this, model: model, emitter: emitter });
+        
+
         var btnStart = new FlatButton({ scene: this, emitter: emitter, model: model, key: 'button1', 
             text: 'Fire', event: 'start_game' });
 
@@ -36,6 +39,9 @@ export default class SceneMain extends Phaser.Scene {
         this.alignGrid.placeAtIndex(60, btnStart2);
         
         emitter.on('end_game', this.onEnd, this);
+
+        var scoreBox = new ScoreBox({ scene: this, model: model, emitter: emitter });
+        this.alignGrid.placeAtIndex(5, scoreBox);
 
 
     }

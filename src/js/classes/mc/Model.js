@@ -1,4 +1,5 @@
 import { emitter, G } from "../../index";
+import Singleton from "./Singleton";
 
 export default class Model {
     constructor(e) {
@@ -55,8 +56,11 @@ export default class Model {
     }
 
     set musicOn(val) {
+        const s = new Singleton();
+        const emitter = s.emitter;
+        const mediaManager = s.mediaManager;
         this._musicOn = val;
-        this.emitter.emit(G.MUSIC_CHANGED);
+        emitter.emit(G.MUSIC_CHANGED);
         mediaManager.musicChanged();
     }
 }

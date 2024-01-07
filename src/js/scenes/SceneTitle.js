@@ -28,7 +28,6 @@ export default class SceneTitle extends Phaser.Scene {
         this.alignGrid.placeAtIndex(93, btnStart);
 
         emitter.on("start_game", this.startGame, this);
-        // mediaManager.setBackgroundMusic("backgroundMusic");
     }
 
     startGame() {

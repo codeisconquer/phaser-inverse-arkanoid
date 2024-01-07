@@ -6,7 +6,7 @@ export default class ToggleButton extends Phaser.GameObjects.Container
 	{
 		super(config.scene);
 		this.scene=config.scene;
-
+		this.emitter = config.emitter;
 		this.back=this.scene.add.image(0,0,config.backKey);
 		this.onIcon=this.scene.add.image(0,0,config.onIcon);
 		this.offIcon=this.scene.add.image(0,0,config.offIcon);
@@ -54,7 +54,7 @@ export default class ToggleButton extends Phaser.GameObjects.Container
 		this.setIcons();
 		if (this.event)
 		{
-			emitter.emit(this.event,this.value);
+			this.emitter.emit(this.event,this.value);
 		}
 	}
 	setIcons()
