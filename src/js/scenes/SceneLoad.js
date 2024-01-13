@@ -40,10 +40,21 @@ export default class SceneLoad extends Phaser.Scene {
         this.load.image("title", "images/title.png");
         this.load.image("titleBack", "images/titleBack.jpg");
 
+        this.load.spritesheet("balls", "images/balls.png", {frameWidth: 100, frameHeight: 100});
+        
+        this.load.image("bar-vertical", "images/bar.png");
+        this.load.image("square-red", "images/square-red.png");
+        this.load.image("square-blue", "images/square-blue.png");
+        this.load.image("square-green", "images/square-green.png");
+        this.load.image("square-teal", "images/square-teal.png");
+        this.load.image("square-purple", "images/square-purple.png");
+        this.load.image("square-pink", "images/square-pink.png");
+        this.load.image("square-orange", "images/square-orange.png");
+        this.load.image("square-yellow", "images/square-yellow.png");
     }
     create() {
         console.log('SceneLoad create method called', this.game);
-        this.scene.start("SceneTitle");
+        this.scene.start("SceneMain"); //SceneTitle
     }
 
     onProgress(value) {

@@ -23,6 +23,13 @@ if (isMobile == -1) {
     width: 480,
     height: 640,
     parent: 'phaser-game',
+    backgroundColor: '#cccccc',
+    physics: {
+      default: 'arcade',
+      arcade: {
+        debug: true
+      }
+    },
     scene: [SceneLoad, SceneTitle, SceneMain, SceneOver],
   };
 } else {
@@ -31,6 +38,13 @@ if (isMobile == -1) {
     width: window.innerWidth,
     height: window.innerHeight,
     parent: 'phaser-game',
+    backgroundColor: '#cccccc',
+    physics: {
+      default: 'arcade',
+      arcade: {
+        debug: true
+      }
+    },
     scene: [SceneLoad, SceneTitle, SceneMain, SceneOver],
 
   };
