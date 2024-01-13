@@ -1,4 +1,4 @@
-# Phaser 3 Webpack Starter
+# Phaser 3 Webpack Inverse arkanoid
 
 ## Installation  
 `npm install`  
