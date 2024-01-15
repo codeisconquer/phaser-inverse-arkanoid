@@ -85,6 +85,7 @@ export default class SceneMain extends Phaser.Scene {
 
         this.physics.world.on('collide', (gameObject1, gameObject2, body1, body2) =>
         {
+            console.log('gameObject1', gameObject1, body1, body2);
             // gameObject1.setAlpha(0.5);
             gameObject2.destroy();
             var gravityXRand = (Math.floor(Math.random() * angleMax) - angleMax/2);
